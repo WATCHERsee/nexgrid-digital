@@ -10,7 +10,7 @@ const STATS = [
 
 export default function Stats() {
   return (
-    <section id="why-us" className="bg-ink px-6 py-24 text-white">
+    <section id="why-us" className="bg-panel px-6 py-24 text-white">
       <div className="mx-auto max-w-[1200px]">
         <Reveal className="mb-12 max-w-[620px]">
           <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.08em] text-accent">

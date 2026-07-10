@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="bg-gradient-to-b from-surface to-white px-6 pt-24 pb-18 md:pt-24 md:pb-18"
+      className="bg-gradient-to-b from-surface to-background px-6 pt-24 pb-18 md:pt-24 md:pb-18"
     >
       <div className="mx-auto max-w-[1200px]">
         <div className="max-w-[760px]">
@@ -28,7 +28,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={120}>
-            <p className="mb-8 max-w-[600px] text-[1.1rem] text-gray-500">
+            <p className="mb-8 max-w-[600px] text-[1.1rem] text-gray-500 dark:text-gray-400">
               NexGrid Digital partners with growing companies to build reliable
               software, run infrastructure, and drive measurable marketing
               results — without the agency runaround.
@@ -45,7 +45,7 @@ export default function Hero() {
               </a>
               <a
                 href="#work"
-                className="inline-flex items-center justify-center rounded-md border border-gray-300 px-6 py-3.5 text-[0.95rem] font-semibold text-ink transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+                className="inline-flex items-center justify-center rounded-md border border-gray-300 dark:border-white/15 px-6 py-3.5 text-[0.95rem] font-semibold text-ink transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
               >
                 See Our Work
               </a>
@@ -60,7 +60,7 @@ export default function Hero() {
                     <strong className="text-[1.6rem] font-extrabold">
                       {item.value}
                     </strong>
-                    <span className="text-[0.85rem] text-gray-500">
+                    <span className="text-[0.85rem] text-gray-500 dark:text-gray-400">
                       {item.label}
                     </span>
                   </div>

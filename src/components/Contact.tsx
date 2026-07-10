@@ -17,7 +17,7 @@ const CONTACT_INFO = [
 ];
 
 const inputClasses =
-  "rounded-md border border-gray-300 bg-white px-3.5 py-2.5 text-[0.95rem] text-ink transition-all duration-200 focus:border-accent focus:outline-none focus:ring-[3px] focus:ring-accent/15";
+  "rounded-md border border-gray-300 dark:border-white/15 bg-white dark:bg-white/5 px-3.5 py-2.5 text-[0.95rem] text-ink transition-all duration-200 focus:border-accent focus:outline-none focus:ring-[3px] focus:ring-accent/15";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -39,14 +39,14 @@ export default function Contact() {
             <h2 className="mb-2 text-[1.7rem] font-bold tracking-tight md:text-[2.3rem]">
               Tell us about your project
             </h2>
-            <p className="text-[1.02rem] text-gray-500">
+            <p className="text-[1.02rem] text-gray-500 dark:text-gray-400">
               Fill out the form or book a call directly — we typically respond
               within one business day.
             </p>
 
             <a
               href="#"
-              className="mt-7 inline-flex items-center justify-center rounded-md border border-gray-300 px-6 py-3.5 text-[0.95rem] font-semibold text-ink transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+              className="mt-7 inline-flex items-center justify-center rounded-md border border-gray-300 dark:border-white/15 px-6 py-3.5 text-[0.95rem] font-semibold text-ink transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
             >
               Book a Call on Calendly
             </a>
@@ -54,7 +54,7 @@ export default function Contact() {
             <ul className="mt-10 flex flex-col gap-4 border-t border-line pt-6">
               {CONTACT_INFO.map((item) => (
                 <li key={item.label} className="flex flex-col gap-0.5">
-                  <strong className="text-[0.85rem] text-gray-500">
+                  <strong className="text-[0.85rem] text-gray-500 dark:text-gray-400">
                     {item.label}
                   </strong>
                   <span className="text-[0.98rem] font-medium">{item.value}</span>

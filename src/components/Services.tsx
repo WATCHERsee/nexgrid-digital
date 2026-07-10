@@ -35,7 +35,7 @@ export default function Services() {
           <h2 className="text-[1.7rem] font-bold tracking-tight md:text-[2.3rem]">
             Core services built for growth
           </h2>
-          <p className="mt-2 text-[1.02rem] text-gray-500">
+          <p className="mt-2 text-[1.02rem] text-gray-500 dark:text-gray-400">
             Four focused disciplines, one accountable team — so nothing falls
             through the cracks between vendors.
           </p>
@@ -44,14 +44,14 @@ export default function Services() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map((service, i) => (
             <Reveal key={service.title} delay={i * 80} as="article">
-              <div className="group h-full rounded-[10px] border border-line bg-white p-7 shadow-sm transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-md">
+              <div className="group h-full rounded-[10px] border border-line bg-background p-7 shadow-sm transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-md">
                 <span className="mb-[18px] inline-flex h-11 w-11 items-center justify-center rounded-md bg-accent-tint text-accent transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-rotate-6 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
                   <service.icon className="h-[22px] w-[22px]" strokeWidth={1.6} />
                 </span>
                 <h3 className="mb-2 text-[1.1rem] font-semibold">
                   {service.title}
                 </h3>
-                <p className="text-[0.92rem] text-gray-500">{service.desc}</p>
+                <p className="text-[0.92rem] text-gray-500 dark:text-gray-400">{service.desc}</p>
               </div>
             </Reveal>
           ))}

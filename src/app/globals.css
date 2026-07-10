@@ -1,21 +1,45 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #12151c;
+  --surface: #f4f5f7;
+  --line: #e7e9ee;
+  --muted: #6b7280;
+  --accent: #2f5dff;
+  --accent-dark: #1e44d6;
+  --accent-tint: #eef2ff;
+  --panel: #12151c;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #0a0c11;
+  --foreground: #e9ebf1;
+  --surface: #12151d;
+  --line: #232733;
+  --muted: #8b93a5;
+  --accent: #6d8bff;
+  --accent-dark: #8ba2ff;
+  --accent-tint: rgba(109, 139, 255, 0.14);
+  --panel: #05060a;
+  color-scheme: dark;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-accent: #2f5dff;
-  --color-accent-dark: #1e44d6;
-  --color-accent-tint: #eef2ff;
-  --color-ink: #12151c;
-  --color-surface: #f4f5f7;
-  --color-line: #e7e9ee;
-  --color-muted: #6b7280;
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-tint: var(--accent-tint);
+  --color-ink: var(--foreground);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --color-panel: var(--panel);
 
   --font-sans: var(--font-inter);
 
@@ -41,6 +65,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
